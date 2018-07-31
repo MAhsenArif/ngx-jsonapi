@@ -24,8 +24,8 @@ export class Http {
         if (method !== 'get' || !this.noDuplicatedHttpCallsService.hasPromises(path)) {
             let req = new HttpRequest(method, this.rsJsonapiConfig.url + path, data || null, {
                 headers: new HttpHeaders({
-                    'Content-Type': 'application/vnd.api+json',
-                    Accept: 'application/vnd.api+json'
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json'
                 })
             });
 
